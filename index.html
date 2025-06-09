@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>I'm Sorry Babyy 💖</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>I'm Sorry Babyy 😔</h1>
+    <p>I never meant to hurt you. You're my world, my Bubuu 💕</p>
+    <button onclick="forgiveMe()">Forgive Me?</button>
+  </div>
+
+  <div class="hearts"></div>
+
+  <script>
+    function forgiveMe() {
+      alert("Yay! You're not angry now 😍 I love you so much Bubuu 💖💖💖");
+    }
+
+    // Floating hearts
+    const heartsContainer = document.querySelector(".hearts");
+    setInterval(() => {
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDuration = 2 + Math.random() * 3 + "s";
+      heartsContainer.appendChild(heart);
+      setTimeout(() => heart.remove(), 5000);
+    }, 300);
+  </script>
+</body>
+</html> 
